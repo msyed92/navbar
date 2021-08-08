@@ -1,3 +1,21 @@
+changeClassByWidth(".hamburger", "hidden", ">");
+changeClassByWidth("#nav-links", "hidden", "<");
+changeClassByWidth("#socials", "hidden", "<");
+
+$(window).resize(function () {
+  changeClassByWidth(".hamburger", "hidden", ">");
+  changeClassByWidth("#nav-links", "hidden", "<");
+  changeClassByWidth("#socials", "hidden", "<");
+  if ($(window).width() > 700) {
+    $("#mobile-nav").slideUp(function () {
+      $("#mobile-nav").addClass("hidden");
+    });
+    if ($(".hamburger").hasClass("flip-right")) {
+      $(".hamburger").addClass("flip-left").removeClass("flip-right");
+    }
+  }
+});
+
 $(".hamburger").on("click", function () {
   if ($(this).hasClass("flip-right")) {
     $(this).addClass("flip-left").removeClass("flip-right");
@@ -7,18 +25,6 @@ $(".hamburger").on("click", function () {
   $("#mobile-nav").slideToggle(function () {
     $("#mobile-nav").removeClass("hidden");
   });
-});
-
-changeClassByWidth(".hamburger", "hidden", ">");
-changeClassByWidth("#mobile-nav", "hidden", ">");
-changeClassByWidth("#nav-links", "hidden", "<");
-changeClassByWidth("#socials", "hidden", "<");
-
-$(window).resize(function () {
-  changeClassByWidth(".hamburger", "hidden", ">");
-  changeClassByWidth("#mobile-nav", "hidden", ">");
-  changeClassByWidth("#nav-links", "hidden", "<");
-  changeClassByWidth("#socials", "hidden", "<");
 });
 
 function changeClassByWidth(selector, c, operator) {
