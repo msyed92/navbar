@@ -45,12 +45,12 @@ a:hover {
 
 .flip-right {
   transform: rotate(90deg);
-  transition: transform 1s linear;
+  transition: transform 0.5s linear;
 }
 
 .flip-left {
   transform: rotate(0deg);
-  transition: transform 1s linear;
+  transition: transform 0.5s linear;
 }
 
 #mobile-nav {
