@@ -6,7 +6,7 @@ $(window).resize(function () {
   changeClassByWidth(".hamburger", "hidden", ">");
   changeClassByWidth("#nav-links", "hidden", "<");
   changeClassByWidth("#socials", "hidden", "<");
-  if ($(window).width() > 700) {
+  if (($(window).width() > 700) & !$("#mobile-nav").hasClass("hidden")) {
     $("#mobile-nav").slideUp(function () {
       $("#mobile-nav").addClass("hidden");
     });
