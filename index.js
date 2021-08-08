@@ -10,11 +10,13 @@ $(".hamburger").on("click", function () {
 });
 
 changeClassByWidth(".hamburger", "hidden", ">");
+changeClassByWidth("#mobile-nav", "hidden", ">");
 changeClassByWidth("#nav-links", "hidden", "<");
 changeClassByWidth("#socials", "hidden", "<");
 
 $(window).resize(function () {
   changeClassByWidth(".hamburger", "hidden", ">");
+  changeClassByWidth("#mobile-nav", "hidden", ">");
   changeClassByWidth("#nav-links", "hidden", "<");
   changeClassByWidth("#socials", "hidden", "<");
 });
